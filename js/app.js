@@ -7,8 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
 //Habilitar búsqueda de establecimientos
 const buscador = document.querySelector('#buscar input');
 buscador.addEventListener('input', () => {
-    if (buscador.nodeValue.length > 5) {
+    if (buscador.value.length > 3) {
         // buscar en la api
-        ui.obtenerSuerencias(buscador.value);
+        ui.obtenerSugerencias(buscador.value);
+    } else {
+        ui.mostrarEstablecimientos();
     }
 });

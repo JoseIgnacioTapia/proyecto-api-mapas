@@ -77,7 +77,9 @@ class UI {
     // filtra las sugerencias en base al input
     filtrarSugerencias(resultado, busqueda) {
         // filtrar con .custom-file-control
-
+        const filtro = resultado.filter(filtro => filtro.calle.indexOf(busqueda) !== -1);
+        console.log(filtro);
         // mostrar los pines
-    }
+        this.mostrarPines(filtro);
+    } 
 }
